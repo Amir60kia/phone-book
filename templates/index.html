@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hand Book</title>
+    <link href="/static/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+
+    <style>
+
+    </style>
+</head>
+<body>
+
+<section>
+
+    <div class="">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" class="svg-bg">
+
+        <path fill="#AE1215" fill-opacity="1" d="M0,224L40,197.3C80,171,160,117,240,90.7C320,64,400,64,480,64C560,64,640,64,720,101.3C800,139,880,213,960,208C1040,203,1120,117,1200,96C1280,75,1360,117,1400,138.7L1440,160L1440,0L1400,0C1360,0,1280,0,1200,0C1120,0,1040,0,960,0C880,0,800,0,720,0C640,0,560,0,480,0C400,0,320,0,240,0C160,0,80,0,40,0L0,0Z"></path>
+
+        </svg>
+        <img src="../static/image/1.png" class="img-fluid overlay-img" >
+    </div>
+
+</section>
+<section>
+    <div class="container ">
+        <h1 class="mb-5 text-center titel_body">دفترچه راهنمای گروه کویر</h1>
+        <form method="POST" action="/" class="mb-5">
+            <div class="form-group " style="padding-top: 20px;">
+                <input type="text" class="form-control" name="search" placeholder="نام، شماره تلفن، ایمیل یا واحد را جستجو کنید">
+            </div>
+
+                <div class="row align-items-center justify-content-center" style="height: 100%;">
+                    <div class="col-1">
+            <button type="submit" class="btn btn-primary custom-margin-top">جستجو</button>
+                        </div>
+                </div>
+
+
+        </form>
+        <div class="d-flex justify-content-end mb-3">
+            <a href="{{ url_for('login') }}" class="btn btn-primary">ورود</a>
+        </div>
+
+        {% if contacts %}
+        <table class="table table-striped table-bordered custom-table" dir="rtl">
+            <thead>
+                <tr>
+                    <th>نام</th>
+                    <th>نام خانوادگی</th>
+                    <th>شماره داخلی</th>
+                    <th>ایمیل</th>
+                    <th>واحد</th>
+                    <th>شماره موبایل</th>
+                    <th>شرکت</th>
+
+                </tr>
+            </thead>
+            <tbody>
+                {% for contact in contacts %}
+                <tr>
+                    <td>{{ contact.name }}</td>
+                    <td>{{ contact.lastname }}</td>
+                    <td>{{ contact.phone }}</td>
+                    <td>{{ contact.email }}</td>
+                    <td>{{ contact.unit }}</td>
+                    <td>{{ contact.mobile }}</td>
+                    <th>{{ contact.company }}</th>
+
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        {% else %}
+        <div class="alert alert-info text-center" >هیچ نتیجه‌ای یافت نشد</div>
+        {% endif %}
+    </div>
+    </section>
+    <section class="text-center align- md-4">
+        <div >
+            <footer class="text-center " style="padding: 80px;" >
+                <h10>انفورماتیک الکتروکویر</h10>
+            </footer>
+        </div>
+    </section>
+
+<!--    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>-->
+<!--    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>-->
+<!--    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>-->
+    <script src="/static/js/bootstrap.bundle.js "></script>
+</body>
+</html>

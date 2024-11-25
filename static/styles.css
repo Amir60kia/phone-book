@@ -1,0 +1,92 @@
+@font-face {
+    font-family: "Vazir";
+    src: url("font/Vazir-Medium-FD-WOL.eot");
+    src: url("font/Vazir-Medium-FD-WOL.eot?#iefix") format("embedded-opentype"),
+        url("font/Vazir-Medium-FD-WOL.woff2") format("woff2"),
+        url("font/Vazir-Medium-FD-WOL.woff") format("woff"),
+        url("font/Vazir-Medium-FD-WOL.ttf") format("ttf");
+
+}
+
+
+body {
+    margin: -20px;
+    background-color: #f8f9fa;
+    font-family: "Vazir" !important;
+    /*font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;*/
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.table {
+    margin-top: 20px;
+}
+
+.btn-primary {
+    background-color: #007bff;
+    border: none;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+}
+.right-align-input {
+    text-align: right;
+}
+.text-center{
+    text-align: center;
+}
+.center-button {
+    display: flex;
+    justify-content: center;
+}
+.wide-input{
+    width: 100%;
+    max-width: 600px;
+}
+body{
+    padding: 20px;
+}
+/*.container{*/
+/*    max-width: 800px;*/
+/*}*/
+.table td, .table th {
+    vertical-align: middle;
+}
+.centered-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.form-control {
+    text-align: right; /* برای راست‌چین کردن متن در ورودی */
+}
+.custom-margin-top {
+    margin-top: 50px; /* فاصله مورد نظر از بالا */
+}
+
+
+.svg-bg {
+            width: 100%;
+            height: auto; /* حفظ نسبت ابعاد SVG */
+        }
+
+.overlay-img {
+border-color: #f8f9fa;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(100%, -220%);
+  width: 200px;
+  height: 200px;
+}
+.titel_body {
+    margin-top: -7.5rem;
+}
+.custom-table {
+    width: 150%;
+    margin-left: -170px;
+}
